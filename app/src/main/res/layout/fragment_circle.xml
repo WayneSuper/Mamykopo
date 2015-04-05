@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    >
+
+    <cn.wayne.mamypoko.widget.dragsortlistview.DragSortListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="10dp"
+        android:listSelector="@drawable/common_btn_bg"
+        app:collapsed_height="2dp"
+        app:drag_enabled="true"
+        app:drag_handle_id="@id/drag_handle"
+        app:drag_scroll_start="0.33"
+        app:drag_start_mode="onLongPress"
+        app:float_alpha="0.3"
+        app:float_background_color="@color/drag_pressd_color"
+        app:max_drag_scroll_speed="0.5"
+        app:slide_shuffle_speed="0.3"
+        app:use_default_controller="true"
+        />
+
+
+</FrameLayout>

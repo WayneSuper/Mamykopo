@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:placeholderImage="@drawable/act_default"
+            app:placeholderImageScaleType="fitXY"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/act_over"
+            android:layout_gravity="top|right"
+            />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奖品数："
+                android:textSize="@dimen/sp12"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="#F00"
+                android:textSize="@dimen/sp12"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="份"
+                android:textSize="@dimen/sp12"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离结束："
+                android:textSize="@dimen/sp12"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4天5小时"
+                android:textColor="#F00"
+                android:textSize="@dimen/sp12"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已经结束"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sp12"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

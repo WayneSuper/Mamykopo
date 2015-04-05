@@ -1,0 +1,42 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   .idea/gradle.xml
+#	modified:   .idea/libraries/support_annotations_21_0_3.xml
+#	modified:   .idea/libraries/support_v4_21_0_3.xml
+#	new file:   .idea/libraries/universal_image_loader_1_9_3.xml
+#	modified:   .idea/misc.xml
+#	modified:   .idea/workspace.xml
+#	modified:   app/app.iml
+#	modified:   app/build.gradle
+#	new file:   app/libs/universal-image-loader-1.9.3.jar
+#	modified:   app/src/main/java/cn/wayne/mamypoko/MainActivity.java
+#	modified:   app/src/main/java/cn/wayne/mamypoko/home/fragment/HomeFragment.java
+#	new file:   app/src/main/java/cn/wayne/mamypoko/utils/ImageLoaderTools.java
+#	new file:   app/src/main/java/cn/wayne/mamypoko/widget/CarouselView.java
+#	new file:   app/src/main/java/cn/wayne/mamypoko/widget/FragmentTabHost.java
+#	new file:   app/src/main/res/drawable-xhdpi/actionbar_chat.png
+#	new file:   app/src/main/res/drawable-xhdpi/actionbar_mail.png
+#	deleted:    app/src/main/res/drawable-xhdpi/actionbar_mail_normal.png
+#	deleted:    app/src/main/res/drawable-xhdpi/actionbar_mail_pressed.png
+#	new file:   app/src/main/res/drawable-xhdpi/actionbar_mygift.png
+#	new file:   app/src/main/res/drawable-xhdpi/actionbar_settings.png
+#	new file:   app/src/main/res/drawable-xhdpi/actionbar_sort.png
+#	new file:   app/src/main/res/drawable-xhdpi/main_dot_light.png
+#	new file:   app/src/main/res/drawable-xhdpi/main_dot_white.png
+#	deleted:    app/src/main/res/drawable/actionbar_mail.xml
+#	new file:   app/src/main/res/drawable/image_holder.xml
+#	modified:   app/src/main/res/layout/activity_main.xml
+#	modified:   app/src/main/res/layout/fragment_home.xml
+#	new file:   app/src/main/res/layout/layout_banner.xml
+#	modified:   app/src/main/res/layout/layout_toolbar.xml
+#	modified:   app/src/main/res/menu/menu_main.xml
+#	modified:   app/src/main/res/values/attrs.xml
+#	modified:   app/src/main/res/values/dimens.xml
+#	modified:   app/src/main/res/values/strings.xml
+#
+

@@ -1,0 +1,245 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:background="@color/comm_background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_height="90dp"
+          >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/civ_header_photo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="12dp"
+                android:layout_centerVertical="true"
+                app:placeholderImage="@drawable/wel_head"
+                app:roundAsCircle="true"
+
+                />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/text_per_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/sp14"
+                android:maxLength="12"
+                android:ellipsize="end"
+                android:text="风也抚不平眉间的寂寞"
+                android:layout_toRightOf="@id/civ_header_photo"
+                android:layout_alignTop="@id/civ_header_photo"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/text_per_gexingqianm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="30"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/sp12"
+                android:ellipsize="end"
+                android:text="我就是我是不一样的烟火 dancing~324234324234234234234234234"
+                android:layout_toRightOf="@id/civ_header_photo"
+                android:layout_below="@id/text_per_name"
+                android:layout_marginTop="5dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/find_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="5dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/comm_line_color"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/common_btn_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="999"
+                    android:textColor="#ff00baff"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="人品"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/common_btn_bg"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:textColor="#ff00baff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="999"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="日记"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/common_btn_bg"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#ff00baff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="999"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="糗事"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="15dp"
+         >
+
+            <TextView
+                android:id="@+id/lab_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的状态"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_margin_left"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="怀孕中"
+                android:textColor="#F00"
+                android:layout_toRightOf="@id/lab_status"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/find_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_margin_right"
+                android:layout_marginLeft="@dimen/activity_margin_left"
+                />
+
+        </RelativeLayout>
+
+
+        <cn.wayne.mamypoko.widget.FindItem
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showLine="show"
+            app:typeImage="@drawable/fragment_my_post_icon"
+            app:typeText="帖子"
+            app:number="10"
+            />
+
+        <cn.wayne.mamypoko.widget.FindItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showLine="show"
+            app:typeImage="@drawable/fragment_my_reply_icon"
+            app:typeText="回复"
+            app:number="0"
+            />
+        <cn.wayne.mamypoko.widget.FindItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showLine="hide"
+            app:typeImage="@drawable/fragment_my_collect_icon"
+            app:typeText="收藏"
+            app:number="11"
+            />
+
+
+
+        <cn.wayne.mamypoko.widget.FindItem
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showLine="hide"
+            app:typeImage="@drawable/fragment_my_gift_icon"
+            app:typeText="礼物"
+            app:number="10"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

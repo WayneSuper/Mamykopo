@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    tools:showIn="@layout/fragment_found">
+
+    <ImageView
+        android:id="@+id/image_found_item_type"
+        android:layout_width="32dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="32dp"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_found_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:ellipsize="middle"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/sp14"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/text_found_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/comm_text_gray"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="2dp"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/image_found_item_row"
+            />
+
+        <View
+            android:id="@+id/view_found_item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#88bbbbbb"
+            android:layout_alignParentBottom="true" />
+
+        <ImageView
+            android:id="@+id/image_found_item_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/find_right"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionBarColor">#ffff3b71</color>
+    <color name="statusBarColor">@color/actionBarColor</color>
+    <color name="windowBackgroundColor">#FFF</color>
+    <color name="main_tab_text_selected">@color/actionBarColor</color>
+    <color name="main_tab_text">#3c3c3c</color>
+    <color name="head_border_color">#FFFFFF</color>
+    <color name="white">#FFF</color>
+    <color name="translate">#00000000</color>
+    <color name="translate_click_color">#338a8a8a</color>
+    <color name="common_text_color">#3c3c3c</color>
+    <color name="material_blue_500">#5677fc</color>
+    <color name="material_blue_600">#4e6cef</color>
+    <color name="primary">@color/actionBarColor</color>
+    <color name="primary_pressed" >#ffbd3161</color>
+    <color name="ripple">@color/material_blue_500</color>
+    <color name="gray_white">#ffb9b9b9</color>
+    <color name="comm_text_gray">#ff8e8e8e</color>
+    <color name="comm_background">#ffe5dfd1</color>
+    <color name="drag_pressd_color">#ffff42a4</color>
+    <color name="comm_line_color">#cce2e2e2</color>
+</resources>

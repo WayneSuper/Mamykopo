@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_home_image_top_corner"
+  >
+    <FrameLayout
+        android:id="@+id/fl_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image_home_find"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/info_bg5" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/ic_top_corner"
+            />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/text_home_find_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_image_container"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginRight="@dimen/activity_margin_right"
+        android:layout_marginTop="10dp"
+        android:ellipsize="middle"
+        android:padding="2dp"
+        android:singleLine="true"
+        android:text="323233223323232"
+        android:textColor="@color/common_text_color"
+        android:textSize="@dimen/sp16" />
+
+    <LinearLayout
+        android:id="@+id/ll_home_find_type_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_home_find_name"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <cn.wayne.mamypoko.widget.CircleImageView
+            android:id="@+id/image_home_find_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/text_home_find_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="宝宝养育"
+            android:textColor="@color/gray_white"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignTop="@id/ll_home_find_type_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_home_find_name"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:layout_marginRight="@dimen/activity_margin_right"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/relist_icon"
+            />
+
+        <TextView
+            android:id="@+id/text_home_find_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="88"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+</RelativeLayout>

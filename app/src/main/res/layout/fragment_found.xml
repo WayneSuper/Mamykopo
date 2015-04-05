@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comm_background"
+    android:orientation="vertical"
+    >
+
+   <cn.wayne.mamypoko.widget.FindItem
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:typeImage="@drawable/find_f6"
+       app:typeText="搜索"
+       app:showLine="show"
+       />
+    <cn.wayne.mamypoko.widget.FindItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/find_f0"
+        app:typeText="百宝箱"
+        app:showLine="hide"
+        />
+
+
+    <cn.wayne.mamypoko.widget.FindItem
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/find_f1"
+        app:typeText="心情日记"
+        app:showLine="show"
+        />
+    <cn.wayne.mamypoko.widget.FindItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/find_f3"
+        app:typeText="糗事一箩筐"
+        app:showLine="hide"
+        />
+
+    <cn.wayne.mamypoko.widget.FindItem
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/find_f4"
+        app:typeText="专家答疑"
+        app:showLine="show"
+        />
+    <cn.wayne.mamypoko.widget.FindItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/find_f5"
+        app:typeText="@string/item_found_camera"
+        app:showLine="show"
+        />
+    <cn.wayne.mamypoko.widget.FindItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/find_f0"
+        app:typeText="趣味测试"
+        app:showLine="hide"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="right" />
+
+
+</LinearLayout>
+</ScrollView>

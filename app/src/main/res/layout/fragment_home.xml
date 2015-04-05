@@ -1,0 +1,103 @@
+<FrameLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.wayne.mamypoko.widget.ObservableScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <cn.wayne.mamypoko.widget.CarouselView
+                    android:id="@+id/carouseView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:defalut_image="@drawable/image_holder"
+                    />
+
+                <include
+                    android:id="@+id/trickView1"
+                    layout="@layout/layout_home_buttons"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_margin_left"
+                        android:text="@string/find_bty"
+                        android:textColor="#ff8d5636"
+                        android:textSize="@dimen/sp16"/>
+                </LinearLayout>
+
+                <cn.wayne.mamypoko.widget.NoScrollListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:cacheColorHint="@color/translate"
+                    android:divider="@color/white"
+                    android:dividerHeight="10dp"
+                    android:listSelector="@drawable/common_btn_bg"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="@dimen/activity_margin_left"
+                    android:paddingRight="@dimen/activity_margin_right"/>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/trickView2"
+                layout="@layout/layout_home_buttons"/>
+        </FrameLayout>
+    </cn.wayne.mamypoko.widget.ObservableScrollView>
+
+    <cn.wayne.mamypoko.widget.actionbutton.FloatingActionsMenu
+        android:id="@+id/fab_home_actions_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        app:fab_addButtonColorNormal="@color/primary"
+        app:fab_addButtonColorPressed="@color/primary_pressed"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_addButtonSize="mini"
+        app:fab_labelsPosition="right">
+
+        <cn.wayne.mamypoko.widget.actionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#ff8cddff"
+            app:fab_colorPressed="#ff4fb2ff"
+            app:fab_icon="@drawable/grid_img6"
+            app:fab_size="mini"
+            app:fab_title="不能吃"/>
+
+        <cn.wayne.mamypoko.widget.actionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#ffd7a2ff"
+            app:fab_colorPressed="#ffbd64ff"
+            app:fab_icon="@drawable/grid_img7"
+            app:fab_size="mini"
+            app:fab_title="心情日记"/>
+
+    </cn.wayne.mamypoko.widget.actionbutton.FloatingActionsMenu>
+</FrameLayout>
