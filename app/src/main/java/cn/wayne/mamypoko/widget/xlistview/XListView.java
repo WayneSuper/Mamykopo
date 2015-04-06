@@ -14,6 +14,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
@@ -249,6 +250,33 @@ public class XListView extends ListView implements OnScrollListener {
         mFooterView.setBottomMargin(height);
 
 //		setSelection(mTotalItemCount - 1); // scroll to bottom
+    }
+
+    public void autoRefresh(){
+        mLastY = -1; // reset
+        //判断是否在第一行，如果不是第一行，则不执行
+        if (getFirstVisiblePosition() == 0) {
+            //判断是否可刷新和不处于刷新状态
+            if (mEnablePullRefresh&&mPullRefreshing!=true) {
+                mPullRefreshing = true;
+                mScrollBack = SCROLLBACK_HEADER;
+                if (mHeaderViewHeight==0) {
+                    int width=((WindowManager)this.getContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getWidth();
+                    mHeaderViewContent.measure(MeasureSpec.makeMeasureSpec(width, MeasureSpec.AT_MOST),
+                            MeasureSpec.makeMeasureSpec((1<<30)-1, MeasureSpec.AT_MOST));
+                    mScroller.startScroll(0, 0, 0, mHeaderViewContent.getMeasuredHeight(),SCROLL_DURATION);
+                    invalidate();
+                }else{
+                    mScroller.startScroll(0, 0, 0, mHeaderViewHeight,SCROLL_DURATION);
+                    invalidate();
+                }
+                mHeaderView.setState(XListViewHeader.STATE_REFRESHING);
+                if (mListViewListener != null) {
+                    mListViewListener.onRefresh();
+                }
+            }
+            resetHeaderHeight();
+        }
     }
 
     private void resetFooterHeight() {

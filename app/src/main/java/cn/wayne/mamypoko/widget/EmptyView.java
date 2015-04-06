@@ -99,8 +99,6 @@ public class EmptyView extends RelativeLayout implements View.OnClickListener {
      * NETWORK_LOADING
      * NODATA
      * NODATA_NO_CLICK
-     *
-     * @param type
      */
     public void setErrorType(int type) {
         setVisibility(View.VISIBLE);
@@ -162,6 +160,8 @@ public class EmptyView extends RelativeLayout implements View.OnClickListener {
                 clickable = false;
                 mErrorState = NODATA_NO_CLICK;
                 break;
+            default:
+                setVisibility(View.GONE);
         }
     }
 }

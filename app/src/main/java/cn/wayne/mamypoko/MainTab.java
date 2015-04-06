@@ -1,10 +1,10 @@
 package cn.wayne.mamypoko;
 
-import cn.wayne.mamypoko.modules.circle.fragment.CircleFragment;
-import cn.wayne.mamypoko.modules.found.fragment.FoundFragment;
-import cn.wayne.mamypoko.modules.home.fragment.HomeFragment;
-import cn.wayne.mamypoko.modules.movement.fragment.MovementFragment;
-import cn.wayne.mamypoko.modules.personal.fragment.PersonalFragment;
+import cn.wayne.mamypoko.mode.circle.fragment.CircleFragment;
+import cn.wayne.mamypoko.mode.found.fragment.FoundFragment;
+import cn.wayne.mamypoko.mode.home.fragment.HomeFragment;
+import cn.wayne.mamypoko.mode.movement.fragment.MovementFragment;
+import cn.wayne.mamypoko.mode.personal.fragment.PersonalFragment;
 
 /**
  * Created by Lumia on 2015/3/29.

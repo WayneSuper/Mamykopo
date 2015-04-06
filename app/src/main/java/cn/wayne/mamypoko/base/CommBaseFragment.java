@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 public abstract class CommBaseFragment extends Fragment {
 
-    private Context mContext;
+    protected Context mContext;
 
 
     @Override

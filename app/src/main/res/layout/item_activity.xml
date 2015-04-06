@@ -5,23 +5,24 @@
               android:layout_width="match_parent"
               android:padding="10dp"
               android:layout_height="wrap_content">
-
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="120dp">
 
         <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/drawView_act_pic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:placeholderImage="@drawable/act_default"
             app:placeholderImageScaleType="fitXY"
+            app:roundedCornerRadius="0dp"
             />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/act_over"
+            android:id="@+id/image_act_over"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="@drawable/act_over"
             android:layout_gravity="top|right"
             />
     </FrameLayout>
@@ -44,6 +45,7 @@
                 />
 
             <TextView
+                android:id="@+id/text_act_jps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1000"
@@ -62,6 +64,7 @@
 
 
         <LinearLayout
+            android:id="@+id/ll_act_se_time_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="visible"
@@ -76,6 +79,7 @@
                 />
 
             <TextView
+                android:id="@+id/text_act_endtime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4天5小时"
@@ -85,6 +89,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/text_act_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="已经结束"

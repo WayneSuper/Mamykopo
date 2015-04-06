@@ -16,6 +16,4 @@ public class AppCore extends Application {
         super.onCreate();
         Fresco.initialize(getApplicationContext(), ImagePipelineFractory.getImagePipelineConfig(getApplicationContext()));
     }
-
-
 }
