@@ -1,18 +1,19 @@
 package cn.wayne.mamypoko.mode.home.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 
 import cn.wayne.mamypoko.R;
-import cn.wayne.mamypoko.mode.home.entity.FindModel;
-import cn.wayne.mamypoko.widget.CircleImageView;
+import cn.wayne.mamypoko.mode.home.entity.Beauty;
 
 /**
  * Created by Lumia on 2015/3/30.
@@ -21,10 +22,10 @@ public class FindAdapter extends BaseAdapter {
 
 
     private Context mContext;
-    private List<FindModel> mList;
+    private List<Beauty.BeautyEntity> mList;
     private LayoutInflater inflater;
 
-    public FindAdapter(Context mContext, List<FindModel> mList) {
+    public FindAdapter(Context mContext, List<Beauty.BeautyEntity> mList) {
         this.mContext = mContext;
         this.mList = mList;
         this.inflater = LayoutInflater.from(this.mContext);
@@ -51,10 +52,10 @@ public class FindAdapter extends BaseAdapter {
 
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.item_home_find_bty, parent,false);
-            holder.displayImage = (ImageView) convertView.findViewById(R.id.image_home_find);
+            convertView = inflater.inflate(R.layout.item_home_find_bty, parent, false);
+            holder.displayImage = (SimpleDraweeView) convertView.findViewById(R.id.image_home_find);
             holder.title = (TextView) convertView.findViewById(R.id.text_home_find_name);
-            holder.header = (CircleImageView) convertView.findViewById(R.id.image_home_find_header);
+            holder.header = (SimpleDraweeView) convertView.findViewById(R.id.image_home_find_header);
             holder.articleType = (TextView) convertView.findViewById(R.id.text_home_find_type);
             holder.pinglunNum = (TextView) convertView.findViewById(R.id.text_home_find_num);
             convertView.setTag(holder);
@@ -62,20 +63,20 @@ public class FindAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-       FindModel item =  mList.get(position);
-       holder.displayImage.setImageResource(R.drawable.info_bg5);
+        Beauty.BeautyEntity item = mList.get(position);
+        holder.displayImage.setImageURI(Uri.parse(item.getUrl()));
         holder.title.setText(item.getTitle());
-        holder.header.setImageResource(R.drawable.icon_sign_in);
-        holder.articleType.setText(item.getArticleType());
-        holder.pinglunNum.setText(item.getPinglunNum()+"");
+       holder.header.setImageURI(Uri.parse(item.getAvatar()));
+        holder.articleType.setText(item.getFrom());
+        holder.pinglunNum.setText(item.getRe_num() + "");
         return convertView;
     }
 
 
     private static final class ViewHolder {
-        public ImageView displayImage;
+        public SimpleDraweeView displayImage;
         public TextView title;
-        public CircleImageView header;
+        public SimpleDraweeView header;
         public TextView articleType;
         public TextView pinglunNum;
     }

@@ -1,12 +1,8 @@
 package cn.wayne.mamypoko.mode.movement.fragment;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.RequestParams;
@@ -20,7 +16,7 @@ import cn.wayne.mamypoko.base.entity.EntityList;
 import cn.wayne.mamypoko.mode.movement.adapter.ActivityAdapter;
 import cn.wayne.mamypoko.mode.movement.entity.ActMode;
 import cn.wayne.mamypoko.mode.movement.entity.DataEntity;
-import cn.wayne.mamypoko.widget.EmptyView;
+import cn.wayne.mamypoko.ui.EmptyView;
 
 /**
  * A simple {@link Fragment} subclass.

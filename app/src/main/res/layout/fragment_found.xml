@@ -10,7 +10,7 @@
     android:orientation="vertical"
     >
 
-   <cn.wayne.mamypoko.widget.FindItem
+   <cn.wayne.mamypoko.ui.FindItem
        android:layout_marginTop="10dp"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
        app:typeText="搜索"
        app:showLine="show"
        />
-    <cn.wayne.mamypoko.widget.FindItem
+    <cn.wayne.mamypoko.ui.FindItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:typeImage="@drawable/find_f0"
@@ -27,7 +27,7 @@
         />
 
 
-    <cn.wayne.mamypoko.widget.FindItem
+    <cn.wayne.mamypoko.ui.FindItem
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         app:typeText="心情日记"
         app:showLine="show"
         />
-    <cn.wayne.mamypoko.widget.FindItem
+    <cn.wayne.mamypoko.ui.FindItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:typeImage="@drawable/find_f3"
@@ -43,7 +43,7 @@
         app:showLine="hide"
         />
 
-    <cn.wayne.mamypoko.widget.FindItem
+    <cn.wayne.mamypoko.ui.FindItem
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,14 +51,14 @@
         app:typeText="专家答疑"
         app:showLine="show"
         />
-    <cn.wayne.mamypoko.widget.FindItem
+    <cn.wayne.mamypoko.ui.FindItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:typeImage="@drawable/find_f5"
         app:typeText="@string/item_found_camera"
         app:showLine="show"
         />
-    <cn.wayne.mamypoko.widget.FindItem
+    <cn.wayne.mamypoko.ui.FindItem
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:typeImage="@drawable/find_f0"

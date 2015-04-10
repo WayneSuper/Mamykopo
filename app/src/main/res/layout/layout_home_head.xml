@@ -14,7 +14,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <cn.wayne.mamypoko.widget.CircleImageView
+        <cn.wayne.mamypoko.ui.CircleImageView
             android:id="@+id/civ_header_photo"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -84,7 +84,6 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:background="@drawable/icon_sign_in"
             android:gravity="center"
             android:textSize="@dimen/sp12"
             />

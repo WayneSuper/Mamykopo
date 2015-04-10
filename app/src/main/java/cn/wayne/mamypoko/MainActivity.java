@@ -13,7 +13,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import cn.bmob.v3.Bmob;
-import cn.wayne.mamypoko.widget.FragmentTabHost;
+import cn.wayne.mamypoko.ui.FragmentTabHost;
 
 
 public class MainActivity extends ActionBarActivity implements TabHost.OnTabChangeListener {

@@ -9,16 +9,14 @@ import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import cn.wayne.mamypoko.R;
 import cn.wayne.mamypoko.base.entity.EntityList;
 import cn.wayne.mamypoko.net.MamyClient;
 import cn.wayne.mamypoko.utils.AppUtil;
-import cn.wayne.mamypoko.utils.StringUtil;
-import cn.wayne.mamypoko.widget.EmptyView;
-import cn.wayne.mamypoko.widget.xlistview.XListView;
+import cn.wayne.mamypoko.ui.EmptyView;
+import cn.wayne.mamypoko.ui.xlistview.XListView;
 
 /**
  * Created by Lumia on 2015/4/4.

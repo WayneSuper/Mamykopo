@@ -1,0 +1,11 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/layout_child_toolbar"/>
+
+    <include layout="@layout/layout_comm_xlistview"/>
+
+
+</RelativeLayout>

@@ -13,8 +13,8 @@ import java.util.List;
 import cn.wayne.mamypoko.R;
 import cn.wayne.mamypoko.mode.circle.adapter.CircleAdapter;
 import cn.wayne.mamypoko.mode.circle.entity.CircleModel;
-import cn.wayne.mamypoko.widget.dragsortlistview.DragSortController;
-import cn.wayne.mamypoko.widget.dragsortlistview.DragSortListView;
+import cn.wayne.mamypoko.ui.dragsortlistview.DragSortController;
+import cn.wayne.mamypoko.ui.dragsortlistview.DragSortListView;
 
 
 /**

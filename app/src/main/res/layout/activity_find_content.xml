@@ -1,0 +1,269 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_view"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="48dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/text_artical_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="春季宝宝的三种“假”发烧"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:textColor="#ffffa8e2"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/detail_link"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="来自"
+                        android:textColor="@color/gray_white"
+                        android:textSize="@dimen/sp14"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_artical_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="情感故事"
+                        android:textColor="@color/gray_white"
+                        android:textSize="@dimen/sp14"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/relist_icon"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_artical_replys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="112"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/gray_white"
+                        android:textSize="@dimen/sp12"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.67dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffe9e9e9"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/drawee_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:roundAsCircle="true"
+                    app:placeholderImage="@drawable/wel_head"
+                    app:actualImageScaleType="fitXY"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_name_container"
+                    android:layout_toRightOf="@id/drawee_icon"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="宝宝养育"
+                        android:id="@+id/text_artical_author_name"
+                        android:textSize="@dimen/sp14"
+                        android:textColor="#ffff00bb"
+                        />
+
+                    <ImageView
+                        android:id="@+id/text_artical_author_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/myinfo_level_lv1"
+                        android:background="@drawable/shape_level_bg"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/ll_name_container"
+                    android:layout_width="wrap_content"
+                    android:layout_alignLeft="@id/ll_name_container"
+                    android:layout_alignBottom="@id/drawee_icon"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_white"
+                        android:textSize="@dimen/sp12"
+                        android:id="@+id/text_artical_author_state"
+                        android:text="孕33周4天"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/act_local"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_white"
+                        android:textSize="@dimen/sp12"
+                        android:id="@+id/text_artical_author_location"
+                        android:text="北京"
+                        android:layout_marginLeft="2dp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bbs_time"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一个小时前"
+                        android:id="@+id/text_artical_author_pubtime"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="@dimen/sp12"
+                        android:textColor="@color/gray_white"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.67dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffe9e9e9"/>
+
+            <LinearLayout
+                android:id="@+id/ll_real_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:dividerHeight="0dp"
+                android:divider="@color/translate"
+                android:cacheColorHint="@color/translate"
+                android:smoothScrollbar="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="none"
+                android:orientation="vertical"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#ffd8d5d2"
+                />
+            <cn.wayne.mamypoko.ui.NoScrollListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:dividerHeight="10dp"
+                android:divider="#ffd8d5d2"
+                android:listSelector="@color/translate"
+                android:cacheColorHint="@color/translate"
+                android:smoothScrollbar="true"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_child_toolbar"/>
+
+    <fragment
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="@string/tag_expression"
+        android:name="cn.wayne.mamypoko.base.ExpressionFragment"/>
+</FrameLayout>
+
+

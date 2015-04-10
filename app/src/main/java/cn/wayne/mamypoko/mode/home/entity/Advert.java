@@ -1,5 +1,13 @@
 package cn.wayne.mamypoko.mode.home.entity;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Type;
 import java.util.List;
 
 import cn.wayne.mamypoko.base.entity.Entity;
@@ -9,35 +17,6 @@ import cn.wayne.mamypoko.base.entity.EntityList;
  * Created by Lumia on 2015/4/6.
  */
 public class Advert extends Entity implements EntityList{
-    /**
-     * ret : 1
-     * data : [{"add_dated":"2015-04-03 11:46:21","end_dated":"2015-04-07 00:00:00","md5_pic":"","pic":"http://www.qubaobei.com/ios/images/51/1428032781.png","source":"0","title":"","type":"1","start_dated":"2015-04-06 00:00:00","url":"7039195","site":"61","post_id":"7039195","admin_id":"16430","adfrom":"0","recom_num":"0","id":"715","age_id":"0","state":"1","pic2":"http://www.qubaobei.com/ios/images/51/1428032781_2.png","pic200":"http://www.qubaobei.com/ios/images/51/1428032781_2.png","q_id":"0"},{"add_dated":"2015-04-03 11:47:19","end_dated":"2015-04-07 23:59:59","md5_pic":"","pic":"http://www.qubaobei.com/ios/images/51/1428032839.png","source":"0","title":"","type":"1","start_dated":"2015-04-06 00:00:00","url":"7013674","site":"61","post_id":"7013674","admin_id":"16430","adfrom":"0","recom_num":"0","id":"717","age_id":"0","state":"1","pic2":"http://www.qubaobei.com/ios/images/51/1428032839_2.png","pic200":"http://www.qubaobei.com/ios/images/51/1428032839_2.png","q_id":"0"},{"add_dated":"2015-04-03 18:54:13","end_dated":"2015-04-07 09:00:00","md5_pic":"","pic":"http://www.qubaobei.com/ios/images/51/1428058453.png","source":"0","title":"","type":"2","start_dated":"2015-04-05 17:58:46","url":"http://m.ci123.com/box/survey/act_baby.php?id=280","site":"61","post_id":"0","admin_id":"1424080","adfrom":"0","recom_num":"1","id":"726","age_id":"0","state":"1","pic2":"http://www.qubaobei.com/ios/images/51/1428058453_2.png","pic200":"http://www.qubaobei.com/ios/images/51/1428058453_2.png","q_id":"0"},{"add_dated":"2015-03-09 17:21:05","end_dated":"2015-04-07 20:30:30","md5_pic":"","pic":"http://www.qubaobei.com/ios/images/51/1428033446.png","source":"0","title":"","type":"2","start_dated":"2015-04-06 20:00:00","url":"http://baby.ci123.com/qq/wap/expert/index.php","site":"61","post_id":"0","admin_id":"1977041","adfrom":"0","recom_num":"2","id":"551","age_id":"0","state":"1","pic2":"http://www.qubaobei.com/ios/images/51/1428033447_2.png","pic200":"http://www.qubaobei.com/ios/images/51/1428033447_2.png","q_id":"0"}]
-     */
-    private int ret;
-    private List<DataEntity> data;
-
-    public void setRet(int ret) {
-        this.ret = ret;
-    }
-
-    public void setData(List<DataEntity> data) {
-        this.data = data;
-    }
-
-    public int getRet() {
-        return ret;
-    }
-
-    public List<DataEntity> getData() {
-        return data;
-    }
-
-    @Override
-    public List<?> getList() {
-        return getData();
-    }
-
-    public class DataEntity {
         /**
          * add_dated : 2015-04-03 11:46:21
          * end_dated : 2015-04-07 00:00:00
@@ -240,5 +219,30 @@ public class Advert extends Entity implements EntityList{
         public String getQ_id() {
             return q_id;
         }
+
+    @Override
+    public List<?> getList() {
+        return null;
     }
+
+    public static final List<Advert> parser(byte[] json){
+        String str = new String(json);
+        try {
+            JSONObject obj = new JSONObject(str);
+            String ret = obj.getString("ret");
+            if(!"1".equals(ret)) {
+                return null;
+            }
+            String gsonStr = obj.getString("data");
+
+            Gson gson = new Gson();
+            Type type = new TypeToken<List<Advert>>(){}.getType();
+            return gson.fromJson(gsonStr,type);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 }

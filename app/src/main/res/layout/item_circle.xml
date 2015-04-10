@@ -1,91 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:padding="6dp"
-    android:id="@id/drag_handle"
-    android:layout_height="100dp">
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:padding="6dp"
+              android:background="#fff0f0f0"
+              android:id="@id/drag_handle"
+              android:layout_height="100dp">
 
 
-        <ImageView
-            android:id="@+id/image_item_circle"
-            android:layout_width="90dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/info_bg5"
+    <ImageView
+        android:id="@+id/image_item_circle"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/info_bg5"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/text_item_circle_type"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="这是测试"
+            android:textColor="@color/common_text_color"
+
+            android:textSize="@dimen/sp18"
             />
-      <LinearLayout
-          android:layout_width="0dp"
-          android:layout_marginLeft="8dp" android:layout_marginRight="8dp"
-          android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical"
-       >
-          <TextView
-              android:id="@+id/text_item_circle_type"
-              android:layout_width="wrap_content"
-              android:layout_height="0dp"
-              android:layout_weight="1"
-              android:text="这是测试"
-              android:textColor="@color/common_text_color"
 
-              android:textSize="@dimen/sp18"
-              />
+        <TextView
+            android:id="@+id/text_item_circle_small_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:gravity="bottom"
+            android:text="求推荐一款好用的电动吸奶器"
+            android:textColor="@color/comm_text_gray"
+            android:textSize="@dimen/sp14"
+            />
 
-          <TextView
-              android:id="@+id/text_item_circle_small_title"
-              android:layout_width="wrap_content"
-              android:layout_height="0dp"
-              android:layout_weight="1"
-              android:singleLine="true"
-              android:ellipsize="middle"
-              android:gravity="bottom"
-              android:text="求推荐一款好用的电动吸奶器"
-              android:textColor="@color/comm_text_gray"
-              android:textSize="@dimen/sp14"
-              />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="bottom"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
-          <LinearLayout
-              android:layout_width="wrap_content"
-              android:gravity="bottom"
-              android:layout_height="0dp" android:layout_weight="2" android:orientation="horizontal">
-              <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/image_circle_small_1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    app:placeholderImage="@drawable/wel_head"
-                    app:actualImageScaleType="fitXY"
-                    />
-              <com.facebook.drawee.view.SimpleDraweeView
-                  android:id="@+id/image_circle_small_2"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp"
-                  android:layout_marginLeft="3dp"
-                  app:placeholderImage="@drawable/wel_head"
-                  app:actualImageScaleType="fitXY"
-                  />
-              <com.facebook.drawee.view.SimpleDraweeView
-                  android:id="@+id/image_circle_small_3"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp"
-                  android:layout_marginLeft="3dp"
-                  app:placeholderImage="@drawable/wel_head"
-                  app:actualImageScaleType="fitXY"
-                  />
-              <com.facebook.drawee.view.SimpleDraweeView
-                  android:id="@+id/image_circle_small_4"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp"
-                  android:layout_marginLeft="3dp"
-                  app:placeholderImage="@drawable/wel_head"
-                  app:actualImageScaleType="fitXY"
-                  />
-              <com.facebook.drawee.view.SimpleDraweeView
-                  android:id="@+id/image_circle_small_5"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp"
-                  android:layout_marginLeft="3dp"
-                  app:placeholderImage="@drawable/wel_head"
-                  app:actualImageScaleType="fitXY"
-                 />
-              </LinearLayout>
-          </LinearLayout>
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_circle_small_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:placeholderImage="@drawable/wel_head"
+                app:actualImageScaleType="fitXY"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_circle_small_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                app:placeholderImage="@drawable/wel_head"
+                app:actualImageScaleType="fitXY"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_circle_small_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                app:placeholderImage="@drawable/wel_head"
+                app:actualImageScaleType="fitXY"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_circle_small_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                app:placeholderImage="@drawable/wel_head"
+                app:actualImageScaleType="fitXY"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_circle_small_5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                app:placeholderImage="@drawable/wel_head"
+                app:actualImageScaleType="fitXY"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

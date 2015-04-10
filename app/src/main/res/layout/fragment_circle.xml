@@ -4,7 +4,7 @@
              android:layout_height="match_parent"
     >
 
-    <cn.wayne.mamypoko.widget.dragsortlistview.DragSortListView
+    <cn.wayne.mamypoko.ui.dragsortlistview.DragSortListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

@@ -38,6 +38,7 @@
                 android:textSize="@dimen/sp14"
                 android:maxLength="12"
                 android:ellipsize="end"
+                android:textColor="@color/comm_text_gray"
                 android:text="风也抚不平眉间的寂寞"
                 android:layout_toRightOf="@id/civ_header_photo"
                 android:layout_alignTop="@id/civ_header_photo"
@@ -52,6 +53,7 @@
                 android:maxLength="30"
                 android:layout_marginLeft="5dp"
                 android:textSize="@dimen/sp12"
+                android:textColor="@color/comm_text_gray"
                 android:ellipsize="end"
                 android:text="我就是我是不一样的烟火 dancing~324234324234234234234234234"
                 android:layout_toRightOf="@id/civ_header_photo"
@@ -105,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="人品"
+                    android:textColor="@color/comm_text_gray"
                     />
             </LinearLayout>
 
@@ -129,6 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="日记"
+                    android:textColor="@color/comm_text_gray"
                     />
             </LinearLayout>
 
@@ -152,6 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="糗事"
+                    android:textColor="@color/comm_text_gray"
                     />
             </LinearLayout>
 
@@ -174,6 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我的状态"
+                android:textColor="@color/common_text_color"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/activity_margin_left"
                 />
@@ -201,7 +207,7 @@
         </RelativeLayout>
 
 
-        <cn.wayne.mamypoko.widget.FindItem
+        <cn.wayne.mamypoko.ui.FindItem
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -211,7 +217,7 @@
             app:number="10"
             />
 
-        <cn.wayne.mamypoko.widget.FindItem
+        <cn.wayne.mamypoko.ui.FindItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:showLine="show"
@@ -219,7 +225,7 @@
             app:typeText="回复"
             app:number="0"
             />
-        <cn.wayne.mamypoko.widget.FindItem
+        <cn.wayne.mamypoko.ui.FindItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:showLine="hide"
@@ -230,7 +236,7 @@
 
 
 
-        <cn.wayne.mamypoko.widget.FindItem
+        <cn.wayne.mamypoko.ui.FindItem
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

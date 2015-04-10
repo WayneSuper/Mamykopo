@@ -2,8 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="AppTheme.Base">
-        <item name="android:colorPrimary">@color/actionBarColor</item>
-        <item name="android:colorPrimaryDark">@color/actionBarColor</item>
+        <item name="android:navigationBarColor">@color/actionBarColor</item>
     </style>
 
     <style name="ToolBarStyle" >

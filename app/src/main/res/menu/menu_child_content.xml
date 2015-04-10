@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+     >
+    <item
+        android:id="@+id/menu_right_btn"
+        android:title="Don't Known"
+        app:showAsAction="always"
+        android:icon="@drawable/fragment_my_gift_icon"
+        />
+
+    <item
+        android:id="@+id/menu_more_share"
+        android:title="分享"
+        app:showAsAction="never"
+        android:icon="@drawable/post_cimg2"
+        />
+
+    <item
+        android:id="@+id/menu_more_collect"
+        android:title="收藏"
+        app:showAsAction="never"
+        android:icon="@drawable/post_cimg3"
+        />
+    <item
+        android:id="@+id/menu_more_report"
+        android:title="举报"
+        app:showAsAction="never"
+        android:icon="@drawable/post_cimg1"
+        />
+</menu>

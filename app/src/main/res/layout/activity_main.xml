@@ -17,7 +17,7 @@
         android:layout_height="1dp"
         android:background="@drawable/divider_line" />
 
-    <cn.wayne.mamypoko.widget.FragmentTabHost
+    <cn.wayne.mamypoko.ui.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_bar_height">
@@ -26,7 +26,7 @@
             android:id="@android:id/tabcontent"
             android:layout_width="0dp"
             android:layout_height="0dp" />
-    </cn.wayne.mamypoko.widget.FragmentTabHost>
+    </cn.wayne.mamypoko.ui.FragmentTabHost>
 
 
 </LinearLayout>

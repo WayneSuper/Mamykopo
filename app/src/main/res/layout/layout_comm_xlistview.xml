@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <cn.wayne.mamypoko.widget.xlistview.XListView
+    <cn.wayne.mamypoko.ui.xlistview.XListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +17,7 @@
         android:fadingEdgeLength="0dp"
         />
 
-    <cn.wayne.mamypoko.widget.EmptyView
+    <cn.wayne.mamypoko.ui.EmptyView
         android:id="@+id/empty_view"
         android:layout_width="match_parent"
 

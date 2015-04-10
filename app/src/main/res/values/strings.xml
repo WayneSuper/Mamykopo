@@ -32,7 +32,15 @@
     <string name="xlistview_header_hint_loading">正在加载...</string>
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="loadmore">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="data_load_error">数据加载失败</string>
+    <string name="title_activity_find_content">FindContentActivity</string>
+    <string name="tag_expression">TAG_EXPRESSION_FRG</string>
+    <string name="reply_empty_tip">回复内容不能为空!</string>
+    <string name="back">返回</string>
+    <string name="floor">楼</string>
+    <string name="title_activity_diary_list">DiaryListActivity</string>
+    <string name="mydiary">心情日记</string>
 
 </resources>

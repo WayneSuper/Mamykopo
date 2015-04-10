@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textColor="@color/common_text_color"
             android:text="@string/home_btn_hot" />
     </LinearLayout>
 
@@ -43,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textColor="@color/common_text_color"
             android:text="@string/home_btn_find" />
     </LinearLayout>
     <LinearLayout
@@ -61,6 +63,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/common_text_color"
             android:layout_marginTop="5dp"
             android:text="@string/home_btn_sale" />
     </LinearLayout>
@@ -81,6 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textColor="@color/common_text_color"
             android:text="@string/home_btn_friends" />
     </LinearLayout>
 </LinearLayout>
