@@ -1,8 +1,13 @@
 package cn.wayne.mamypoko.mode.home.entity;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStreamReader;
 import java.io.Serializable;
+import java.lang.reflect.Type;
 import java.util.List;
 
 /**
@@ -182,7 +187,10 @@ public class Beauty {
 
     public static final Beauty parser(byte[] response) {
         Gson gson = new Gson();
-        Beauty beauty = gson.fromJson(new String(response), Beauty.class);
+        Type type = new TypeToken<Beauty>(){}.getType();
+        JsonReader reader = new JsonReader(new InputStreamReader(new ByteArrayInputStream(response)));
+        reader.setLenient(true);
+        Beauty beauty = gson.fromJson(reader,type);
         return beauty;
     }
 }

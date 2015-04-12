@@ -29,6 +29,11 @@ public class MamyClient {
         Logger.debug(new StringBuilder(packageUrl(url)).append(params.toString()).toString());
     }
 
+    public static void getWithFull(String url ,RequestParams params, ResponseHandlerInterface handler) {
+        client.get(url,params,handler);
+        Logger.debug(new StringBuilder(url).append(params.toString()).toString());
+    }
+
     public static void post(String url ,RequestParams params, ResponseHandlerInterface handler) {
         client.post(packageUrl(url), params, handler);
         Logger.debug(new StringBuilder(packageUrl(url)).append(params.toString()).toString());

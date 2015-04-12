@@ -1,11 +1,51 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-    >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android" />
 
-    <include layout="@layout/layout_child_toolbar"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22.5dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <include layout="@layout/layout_comm_xlistview"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/triangle"
+            />
 
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ffc9c9c9" />
+    </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_child_toolbar" />
+
+        <include layout="@layout/layout_comm_xlistview" />
+    </LinearLayout>
+
+    <cn.wayne.mamypoko.ui.actionbutton.FloatingActionButton
+        android:id="@+id/action_btn_addnew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#ffff9044"
+        app:fab_colorPressed="#ffd17732"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        app:fab_icon="@drawable/add_new"
+        app:fab_size="mini"
+        android:visibility="gone"
+        app:fab_title="新增"/>
+    
+</FrameLayout>

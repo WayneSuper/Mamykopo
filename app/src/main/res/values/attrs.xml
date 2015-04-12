@@ -82,4 +82,13 @@
         <attr name="click_remove_id" format="integer" />
         <attr name="use_default_controller" format="boolean" />
     </declare-styleable>
+    
+    <declare-styleable name="TimeLineCircle">
+        <attr name="month" format="string"/>
+        <attr name="day" format="string"/>
+        <attr name="borderColor" format="reference|color"/>
+        <attr name="bootomColor" format="reference|color"/>
+    </declare-styleable>
+    
+    
 </resources>

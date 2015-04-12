@@ -42,5 +42,11 @@
     <string name="floor">楼</string>
     <string name="title_activity_diary_list">DiaryListActivity</string>
     <string name="mydiary">心情日记</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_diary">DiaryActivity</string>
+    <string name="my_add_diary">我的日记</string>
+    <string name="write_something">写点什么...</string>
+    <string name="select_from_album">从相册中选取</string>
+    <string name="take_photo">拍照获取</string>
 
 </resources>

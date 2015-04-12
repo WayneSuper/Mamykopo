@@ -9,6 +9,8 @@ import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import java.text.SimpleDateFormat;
@@ -168,5 +170,12 @@ public class AppUtil {
         mHomeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                 | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
         context.startActivity(mHomeIntent);
+    }
+
+    public static int getScreenWidth(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics metrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(metrics);
+        return metrics.widthPixels;
     }
 }

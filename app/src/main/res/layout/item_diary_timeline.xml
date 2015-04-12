@@ -1,50 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:background="#ffe0ffd5"
-                android:layout_height="wrap_content" android:paddingLeft="12dp" android:paddingRight="12dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
 
+    <cn.wayne.mamypoko.ui.view.TimeLineCircle
+        android:id="@+id/linecircle_time_line_left"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:month="12"
+        app:day="21"
+        android:layout_marginTop="20dp"
+      />
 
-        <View
-            android:id="@+id/view1"
-            android:layout_width="1dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:background="#ffe9e9e9"/>
-        <ImageView
-            android:id="@+id/image_time_line_left"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/smiley_0"
-            android:layout_below="@id/view1"
-            />
-           <TextView
-               android:id="@+id/text_time_line_time"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="2015年04月22日"
-               android:layout_below="@id/image_time_line_left"
-               android:textSize="@dimen/sp14"
-               android:textColor="@color/actionBarColor"
-               />
-           <View
-               android:layout_below="@id/text_time_line_time"
-               android:id="@+id/view2"
-               android:layout_marginLeft="20dp"
-               android:layout_width="1dp"
-               android:layout_height="match_parent"
-               android:layout_marginTop="5dp"
-               android:background="#ffe9e9e9"/>
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/quan_go_check"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/linecircle_time_line_left"
+        />
+    <TextView
+        android:id="@+id/text_time_line_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:33"
+        android:textSize="10sp"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/image1"
+        android:background="@drawable/timpstap"
+        android:textColor="@color/comm_text_gray"
+        />
+
 
     <RelativeLayout
-        android:layout_width="200dp"
-        android:layout_alignTop="@id/image_time_line_left"
-        android:layout_toRightOf="@id/image_time_line_left"
-        android:background="@drawable/line"
-        android:layout_marginLeft="15dp"
-        android:layout_height="wrap_content"></RelativeLayout>
+        android:id="@+id/ll_content_container"
+        android:layout_width="220dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/image1"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_horizontal"
+        android:layout_toRightOf="@id/image1"
+        android:background="@drawable/line">
 
+        <TextView
+            android:id="@+id/text_time_line_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/sp14"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/draweee_image"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text_time_line_content"
+            app:placeholderImage="@drawable/info_bg5"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImageScaleType="centerCrop"
+            />
+        </RelativeLayout>
 
 
 </RelativeLayout>

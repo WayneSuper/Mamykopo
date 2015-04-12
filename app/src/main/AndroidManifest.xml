@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.wayne.mamypoko" >
+    package="cn.wayne.mamypoko">
 
     <uses-sdk
         android:minSdkVersion="9"
@@ -12,20 +12,20 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
-
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:name=".app.AppCore"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,12 +34,15 @@
         </activity>
         <activity
             android:name=".mode.home.activity.FindContentActivity"
-            android:label="@string/title_activity_find_content" >
-        </activity>
+            android:label="@string/title_activity_find_content" />
         <activity
             android:name=".mode.diary.DiaryListActivity"
-            android:label="@string/title_activity_diary_list" >
-        </activity>
+            android:label="@string/title_activity_diary_list" />
+        <activity
+            android:name=".mode.diary.DiaryActivity"
+            android:label="@string/title_activity_diary"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>
