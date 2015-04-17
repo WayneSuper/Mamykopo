@@ -1,6 +1,7 @@
 package cn.wayne.mamypoko.mode.home.fragment;
 
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,17 +23,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.wayne.mamypoko.R;
+import cn.wayne.mamypoko.base.BaseWebActivity;
+import cn.wayne.mamypoko.mode.bbs.BbsActivity;
 import cn.wayne.mamypoko.mode.diary.DiaryListActivity;
 import cn.wayne.mamypoko.mode.home.activity.FindContentActivity;
 import cn.wayne.mamypoko.mode.home.adapter.FindAdapter;
 import cn.wayne.mamypoko.mode.home.entity.Advert;
 import cn.wayne.mamypoko.mode.home.entity.Beauty;
+import cn.wayne.mamypoko.mode.noeat.NoeatActivity;
 import cn.wayne.mamypoko.net.MamyClient;
 import cn.wayne.mamypoko.ui.CarouselView;
 import cn.wayne.mamypoko.ui.NoScrollListView;
 import cn.wayne.mamypoko.ui.ObservableScrollView;
 import cn.wayne.mamypoko.ui.actionbutton.FloatingActionButton;
 import cn.wayne.mamypoko.ui.actionbutton.FloatingActionsMenu;
+import cn.wayne.mamypoko.utils.AppUtil;
+import cn.wayne.mamypoko.utils.StringUtil;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,6 +54,8 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
     private ArrayList<String> imageUrls;
     private FloatingActionButton actionButtonNoeat;
     private FloatingActionButton actionButtonDiary;
+    private LinearLayout btnBBS;
+    private   List<Advert> adverts;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -69,6 +77,7 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
         root = (FrameLayout) view.findViewById(R.id.root);
         scrollView = (ObservableScrollView) view.findViewById(R.id.scrollView);
         trick = (LinearLayout) view.findViewById(R.id.trickView1);
+        btnBBS = (LinearLayout) view.findViewById(R.id.btn_ll_bbs);
         normal = (LinearLayout) view.findViewById(R.id.trickView2);
         mListView = (NoScrollListView)view.findViewById(R.id.listView);
         actionButtonNoeat = (FloatingActionButton)view.findViewById(R.id.action_btn_noeat);
@@ -93,6 +102,29 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
     private void initEvent() {
         actionButtonDiary.setOnClickListener(this);
         actionButtonNoeat.setOnClickListener(this);
+        btnBBS.setOnClickListener(this);
+        mCarouselView.setOnPageClickListener(new CarouselView.CarouselViewListener() {
+            @Override
+            public void onClick(int position) {
+                Advert item = adverts.get(position);
+                String type = item.getType();
+                if("1".equals(type)) {
+                    Intent intent = new Intent(mContext, FindContentActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString(FindContentActivity.ARGS_ID,item.getUrl());
+                    bundle.putString(FindContentActivity.ARGS_TIME, StringUtil.friendlyTime(item.getAdd_dated()));
+                    intent.putExtra("bundle",bundle);
+                    mContext.startActivity(intent);
+                }
+                else if("2".equals(type)) {
+                    Intent intent = new Intent(mContext, BaseWebActivity.class);
+                    intent.putExtra("url",adverts.get(position).getUrl());
+                    mContext.startActivity(intent);
+                }
+
+
+            }
+        });
     }
 
 
@@ -108,7 +140,7 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
         MamyClient.get("ios/api/adr_ad.php?", params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                List<Advert> adverts = Advert.parser(responseBody);
+               adverts = Advert.parser(responseBody);
                 if(adverts!=null) {
                     for (int i = 0; i < adverts.size(); i++) {
                         Advert item = adverts.get(i);
@@ -153,7 +185,10 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(mContext, FindContentActivity.class);
-                intent.putExtra(FindContentActivity.DISPLAY_OBJECT,mData.get(position));
+                Bundle bundle = new Bundle();
+                bundle.putString(FindContentActivity.ARGS_ID,mData.get(position).getId());
+                bundle.putString(FindContentActivity.ARGS_TIME, mData.get(position).getShowdated());
+                intent.putExtra("bundle",bundle);
                 mContext.startActivity(intent);
             }
         });
@@ -173,9 +208,13 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.action_btn_noeat:
+                startActivity(new Intent(mContext, NoeatActivity.class));
                 break;
             case R.id.action_btn_diary:
                 startActivity(new Intent(mContext, DiaryListActivity.class));
+                break;
+            case R.id.btn_ll_bbs:
+                startActivity(new Intent(mContext, BbsActivity.class));
                 break;
         }
     }

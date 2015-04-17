@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:android="http://schemas.android.com/apk/res/android"
+                                   android:id="@+id/toolbar"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="?attr/actionBarSize"
+                                   style="@style/ToolBarStyle"
+                                   android:background="@color/actionBarColor"
+                                   app:theme="@style/ActionBarThemeOverlay"
+                                   app:popupTheme="@style/ActionBarPopupThemeOverlay"
+    >
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:queryHint="@string/search_hint"
+        app:searchIcon="@drawable/ic_search"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/white"
+        app:closeIcon="@drawable/ic_close"
+        />
+</android.support.v7.widget.Toolbar>

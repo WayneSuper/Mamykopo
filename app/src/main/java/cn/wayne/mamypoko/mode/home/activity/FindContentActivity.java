@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Bundle;
 import android.text.Html;
 import android.util.TypedValue;
 import android.view.MotionEvent;
@@ -39,18 +40,20 @@ import cn.wayne.mamypoko.mode.home.entity.FindContentEntity;
 import cn.wayne.mamypoko.mode.home.entity.FindMoreReplyEntity;
 import cn.wayne.mamypoko.mode.home.entity.FindReplyEntity;
 import cn.wayne.mamypoko.net.MamyClient;
+import cn.wayne.mamypoko.ui.EmptyView;
 import cn.wayne.mamypoko.ui.NoScrollListView;
 
 public class FindContentActivity extends BaseChildActivity implements ExpressionFragment.OnReplyBtnClick {
 
     public static final String DISPLAY_OBJECT = "DISPLAY_OBJECT";
+    public static final String ARGS_ID = "ARGS_ID";
+    public static final String ARGS_TIME = "ARGS_TIME";
     private View rootView;
     TextView text_artical_title;
     private TextView text_artical_replys, text_artical_from,
             text_artical_author_name, text_artical_author_pubtime,
             text_artical_author_state, text_artical_author_location;
     private ImageView image_artical_author_level;
-    private Beauty.BeautyEntity mBeautyEntity;
     private SimpleDraweeView drawee_icon;
     private LinearLayout mContent;
     private FindContent mFindContent;
@@ -63,6 +66,9 @@ public class FindContentActivity extends BaseChildActivity implements Expression
     private int number = 20;
     private boolean loadfinish = true;
     private ScrollView mScrollView;
+    private String mArtcalId;
+    private String mPubTime;
+    private EmptyView mEmptyView;
 
     @Override
     protected int setContentViewID() {
@@ -72,6 +78,7 @@ public class FindContentActivity extends BaseChildActivity implements Expression
     @Override
     protected void initView() {
         super.initView();
+        mEmptyView = (EmptyView) findViewById(R.id.empty_view);
         rootView = findViewById(R.id.root_view);
         text_artical_title = getView(R.id.text_artical_title);
         text_artical_from = getView(R.id.text_artical_from);
@@ -88,6 +95,7 @@ public class FindContentActivity extends BaseChildActivity implements Expression
         mScrollView = getView(R.id.scrollView);
         mContent = getView(R.id.ll_real_container);
         drawee_icon = getView(R.id.drawee_icon);
+        mEmptyView.setErrorType(EmptyView.NETWORK_LOADING_ANIM);
 
     }
 
@@ -152,19 +160,9 @@ public class FindContentActivity extends BaseChildActivity implements Expression
 
     @Override
     protected void initData() {
-        mBeautyEntity = (Beauty.BeautyEntity) getIntent().getSerializableExtra(DISPLAY_OBJECT);
-        if (mBeautyEntity == null) {
-            finish();
-            return;
-        }
-        text_artical_title.setText(mBeautyEntity.getTitle());
-        text_artical_from.setText(mBeautyEntity.getFrom());
-        text_artical_replys.setText(mBeautyEntity.getRe_num());
-        text_artical_author_name.setText(mBeautyEntity.getNickname());
-        text_artical_author_pubtime.setText(mBeautyEntity.getShowdated());
-        text_artical_author_state.setText(mBeautyEntity.getAge_str());
-        image_artical_author_level.setImageBitmap(getDrawableByName(mBeautyEntity.getPic()));
-        drawee_icon.setImageURI(Uri.parse(mBeautyEntity.getAvatar()));
+       Bundle bundle = getIntent().getBundleExtra("bundle");
+        mArtcalId = bundle.getString(ARGS_ID);
+        mPubTime = bundle.getString(ARGS_TIME);
         getFindContentFromServer();
         mReplyEntities = new ArrayList<>();
         mReplyAdapter = new FindReplyAdapter(this, 0, mReplyEntities);
@@ -176,9 +174,8 @@ public class FindContentActivity extends BaseChildActivity implements Expression
     private void getFindContentFromServer() {
         RequestParams params = new RequestParams();
         params.put("mobile", 61);
-        params.put("id", mBeautyEntity.getId());
+        params.put("id", mArtcalId);
         params.put("limit", 20);
-        params.put("mobile", 1);
         //http://www.qubaobei.com/ios/api/adr_view.php?mobile=61&id=7097801&limit=20&order=1
         MamyClient.get("ios/api/adr_view.php?", params, new AsyncHttpResponseHandler() {
             @Override
@@ -191,7 +188,7 @@ public class FindContentActivity extends BaseChildActivity implements Expression
                 }
                 mReplyEntities.addAll(mFindContent.getReplys());
                 mReplyAdapter.notifyDataSetChanged();
-                text_artical_author_location.setText(mFindContent.getCity());
+                setUpTopBar();
                 createContent();
                 if (mFindContent.getHas_more() == 1) {
                     hasMore = true;
@@ -203,10 +200,23 @@ public class FindContentActivity extends BaseChildActivity implements Expression
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                mEmptyView.setErrorType(EmptyView.HIDE_LAYOUT);
                 Toast.makeText(FindContentActivity.this, "数据解析错误", Toast.LENGTH_SHORT).show();
                 FindContentActivity.this.finish();
             }
         });
+    }
+
+    private void setUpTopBar() {
+        text_artical_author_location.setText(mFindContent.getCity());
+        text_artical_title.setText(mFindContent.getTitle());
+        text_artical_from.setText(mFindContent.getNickname());
+        text_artical_replys.setText(mFindContent.getRe_num());
+        text_artical_author_name.setText(mFindContent.getNickname());
+       text_artical_author_pubtime.setText(mPubTime);
+        text_artical_author_state.setText(mFindContent.getAge_str());
+        image_artical_author_level.setImageBitmap(getDrawableByName(mFindContent.getLevel()+""));
+        drawee_icon.setImageURI(Uri.parse(mFindContent.getAvatar()));
     }
 
     private void changeFooterViewState() {
@@ -240,6 +250,10 @@ public class FindContentActivity extends BaseChildActivity implements Expression
                 mContent.addView(draweeView);
             }
         }
+
+
+        mEmptyView.setErrorType(EmptyView.HIDE_LAYOUT);
+        mEmptyView.dismiss();
     }
 
 
@@ -268,7 +282,7 @@ public class FindContentActivity extends BaseChildActivity implements Expression
         params.put("site","2");
         params.put("content", text);
         params.put("crc_qq","NDU2NzAzMSw0NjQ2Nzk4LDE2MTAxNzA7Mzk5OTM5NGEwMjRmZjg2NjFlZmY4MDY3NWQzMGVhYjg%3D");
-        params.put("post_id",mBeautyEntity.getId());
+        params.put("post_id",mArtcalId);
         params.put("to_reply_step","0");
 
         MamyClient.post("", params, new AsyncHttpResponseHandler() {
@@ -313,7 +327,7 @@ public class FindContentActivity extends BaseChildActivity implements Expression
             RequestParams params = new RequestParams();
             params.put("limit", "20");
             params.put("order", "1");
-            params.put("id", mBeautyEntity.getId());
+            params.put("id", mArtcalId);
             params.put("page", pageIndex++);
             MamyClient.get("ios/api/adr_reply_list.php?", params, new AsyncHttpResponseHandler() {
                 @Override

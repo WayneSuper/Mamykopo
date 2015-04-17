@@ -15,7 +15,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@drawable/divider_line" />
+        android:background="@drawable/base_line" />
 
     <cn.wayne.mamypoko.ui.FragmentTabHost
         android:id="@android:id/tabhost"

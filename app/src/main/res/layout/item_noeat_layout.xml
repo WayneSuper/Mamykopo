@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/white"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/drawee_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:roundedCornerRadius="5dp"
+        android:layout_centerVertical="true"
+        app:placeholderImage="@drawable/post_image_default"
+        app:actualImageScaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_toRightOf="@id/drawee_icon"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_name"
+            android:textColor="@color/main_tab_text"
+            android:textSize="@dimen/sp16"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_nikename"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/comm_text_gray"
+            android:textSize="@dimen/sp14"
+            android:layout_marginTop="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <cn.wayne.mamypoko.ui.view.StateImageText
+                android:id="@+id/state_mm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/mm"
+                />
+
+            <cn.wayne.mamypoko.ui.view.StateImageText
+                android:id="@+id/state_yz"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/yz"
+                />
+
+            <cn.wayne.mamypoko.ui.view.StateImageText
+                android:id="@+id/state_br"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/br"
+                />
+
+            <cn.wayne.mamypoko.ui.view.StateImageText
+                android:id="@+id/state_ye"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/ye"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

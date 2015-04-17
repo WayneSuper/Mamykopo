@@ -182,6 +182,11 @@ public class Beauty {
         public String getRe_num() {
             return re_num;
         }
+
+        @Override
+        public String toString() {
+            return getTitle();
+        }
     }
 
 

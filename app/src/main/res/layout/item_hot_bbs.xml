@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              android:background="@color/white"
+              android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_header_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/drawee_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:roundAsCircle="true"
+            app:placeholderImage="@drawable/wel_head"
+            app:actualImageScaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/text_nikename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:maxLength="5"
+            android:ellipsize="end"
+            android:textColor="@color/comm_text_gray"
+            android:text="Helloolleo"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/image_jing"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/list_jing"
+
+            />
+
+        <TextView
+            android:layout_toRightOf="@+id/image_jing"
+            android:id="@+id/text_artical_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp16"
+            android:ellipsize="end"
+            android:textColor="@color/common_text_color"
+            android:maxLength="25"
+            android:maxLines="2"
+            android:text="Helloolleo"
+            />
+
+        <ImageView
+            android:id="@+id/image_haspic"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/has_pic"
+            android:layout_toRightOf="@+id/text_artical_title"
+            />
+
+        <TextView
+            android:id="@+id/text_age_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/actionBarColor"
+            android:text="Helloolleo"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/text_artical_title"
+            />
+
+        <TextView
+            android:id="@+id/text_artical_replys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/comm_text_gray"
+            android:text="22222"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/text_artical_title"
+            />
+
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/relist_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/text_artical_replys"
+            />
+
+        <TextView
+            android:id="@+id/text_show_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:layout_toLeftOf="@+id/image_1"
+            android:textColor="@color/comm_text_gray"
+            android:text="22222"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            />
+
+        <ImageView
+            android:id="@+id/image_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bbs_time"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/text_show_time"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

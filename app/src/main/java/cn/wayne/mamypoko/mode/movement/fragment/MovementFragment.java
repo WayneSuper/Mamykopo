@@ -1,8 +1,10 @@
 package cn.wayne.mamypoko.mode.movement.fragment;
 
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.RequestParams;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.wayne.mamypoko.R;
+import cn.wayne.mamypoko.base.BaseWebActivity;
 import cn.wayne.mamypoko.base.BaseXListViewFragment;
 import cn.wayne.mamypoko.base.entity.EntityList;
 import cn.wayne.mamypoko.mode.movement.adapter.ActivityAdapter;
@@ -64,6 +67,25 @@ public class MovementFragment extends BaseXListViewFragment {
     protected EntityList parseList(String str) {
         Gson gson = new Gson();
         return gson.fromJson(str, ActMode.class);
+    }
+
+    @Override
+    protected void initEvent(View view) {
+        super.initEvent(view);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                DataEntity item = data.get(position - 1) ;
+                Intent intent = new Intent(mContext, BaseWebActivity.class);
+                //http://baby.ci123.com/box/mobile/detail.php?gid=429&action=goto_innerweb
+                //http://baby.ci123.com/box/mobile/detail.php?gid=456&action=goto_innerweb&o_user_id=4325690&m_plat=61&m_site=2
+                intent.putExtra("url",item.getUrl()+"&o_user_id=4325690&m_plat=61&m_site=2");
+                mContext.startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override

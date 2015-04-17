@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="cn.wayne.mamypoko.mode.bbs.BbsActivity">
+
+    <item android:id="@+id/action_right"
+          android:title="Don't Known"
+          android:icon="@drawable/actionbar_mygift"
+          app:showAsAction="always"/>
+</menu>

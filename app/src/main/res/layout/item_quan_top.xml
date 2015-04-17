@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="10dp"
+    android:background="@color/white"
+>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/drawee_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:actualImageScaleType="focusCrop"
+        app:roundAsCircle="true"
+        app:placeholderImage="@drawable/wel_head"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xxxx"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/actionBarColor"/>
+
+        <LinearLayout
+            android:layout_below="@+id/text_name"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/quan_pnum"
+                />
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tiezi"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/comm_text_gray"/>
+
+            <TextView
+                android:id="@+id/text_tie_num"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/comm_text_gray"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/relist_icon"
+                />
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/huifu"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/comm_text_gray"/>
+
+            <TextView
+                android:id="@+id/text_replys_num"
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22万"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/comm_text_gray"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

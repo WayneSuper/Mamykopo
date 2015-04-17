@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              >
+
+    <include layout="@layout/layout_child_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/draweee_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:actualImageScaleType="focusCrop"
+                    app:placeholderImage="@drawable/info_bg5"
+                    app:placeholderImageScaleType="centerCrop"
+                    />
+
+                <cn.wayne.mamypoko.ui.NoScrollListView
+                    android:id="@android:id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider_line"
+                    android:cacheColorHint="@color/translate"
+                    android:listSelector="@color/translate"
+                    android:dividerHeight="0.67dp"
+                    />
+            </LinearLayout>
+
+           <cn.wayne.mamypoko.ui.EmptyView
+                android:id="@+id/empty_view"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>
