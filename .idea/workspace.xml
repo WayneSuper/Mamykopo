@@ -54,9 +54,13 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5776b24-4bfe-48bb-8f37-aff17ac0405b" name="Default" comment="">
+    <list default="true" id="b5776b24-4bfe-48bb-8f37-aff17ac0405b" name="Default" comment="提交">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListVIewActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/noeat/NoeatSearchResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/noeat/NoeatSearchResultActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="b7125fea-6efc-43bf-aba8-6c8beb04182b" name="Failed commit: Default" comment="提交" />
     <ignored path="Mamypoko.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -124,11 +128,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseXListViewActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewActivity.java">
+      <file leaf-file-name="BaseXListVIewActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListVIewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21333334">
-              <caret line="26" column="43" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+              <folding>
+                <element signature="e#1992#1993#0" expanded="true" />
+                <element signature="e#2016#2017#0" expanded="true" />
+                <element signature="e#3104#3105#0" expanded="true" />
+                <element signature="e#3128#3129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BbsActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1783961">
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseXListViewFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,45 +198,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="82" column="49" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_circle_top.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_circle_top.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xscrollview_layout.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/xscrollview_layout.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8125">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_quan_top.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_quan_top.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -1084,7 +1084,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_hot_bbs.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_base_web.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/ui/view/ProgressWebView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseWebActivity.java" />
@@ -1110,6 +1109,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_quan_top.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseChildActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/circle/CircleListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewActivity.java" />
       </list>
     </option>
   </component>
@@ -2256,18 +2256,19 @@
       <recent name="cn.wayne.mamypoko.personal.fragment" />
       <recent name="cn.wayne.mamypoko.movement.fragment" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-hdpi" />
-      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-mdpi" />
-      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-xhdpi" />
-      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-xxhdpi" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.wayne.mamypoko" />
+      <recent name="" />
     </key>
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="cn.wayne.mamypoko" />
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\as_workspace\Mamykopo\app\src\main\java\cn\wayne\mamypoko\base" />
+      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-hdpi" />
+      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-mdpi" />
+      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-xhdpi" />
+      <recent name="E:\as_workspace\Mamykopo\app\src\main\res\drawable-xxhdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -2564,7 +2565,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429256932646</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="建立圈子">
+      <created>1429256953579</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1429256953579</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2589,11 +2596,11 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32730263" sideWeight="0.5558011" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24330118" sideWeight="0.49463135" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24330118" sideWeight="0.49463135" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35262594" sideWeight="0.4517611" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268921" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3118971" sideWeight="0.18897638" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24330118" sideWeight="0.50536865" order="12" side_tool="true" content_ui="tabs" x="93" y="315" width="1242" height="137" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3118971" sideWeight="0.19040802" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3118971" sideWeight="0.809592" order="12" side_tool="true" content_ui="tabs" x="93" y="315" width="1242" height="137" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.49749464" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2627,7 +2634,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/WayneSuper/Mamypoko&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="建立个人中心，修改图片加载方式" />
     <MESSAGE value="建立圈子" />
-    <option name="LAST_COMMIT_MESSAGE" value="建立圈子" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2636,14 +2644,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/progress_bar_states.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08708273">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program Files/Android/sdk/sources/android-21/android/webkit/WebView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9317852">
@@ -2889,14 +2889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_set_top.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2960,14 +2952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3128,10 +3112,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListViewFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21333334">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/base/BaseXListVIewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+          <folding>
+            <element signature="e#1992#1993#0" expanded="true" />
+            <element signature="e#2016#2017#0" expanded="true" />
+            <element signature="e#3104#3105#0" expanded="true" />
+            <element signature="e#3128#3129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/wayne/mamypoko/mode/bbs/BbsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1783961">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="21" />
           <folding />
         </state>
       </provider>

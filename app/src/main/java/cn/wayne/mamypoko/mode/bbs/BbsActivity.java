@@ -1,10 +1,7 @@
 package cn.wayne.mamypoko.mode.bbs;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -13,23 +10,19 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.loopj.android.http.RequestParams;
 
-import org.apache.http.protocol.RequestDate;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import cn.wayne.mamypoko.R;
-import cn.wayne.mamypoko.base.BaseChildActivity;
-import cn.wayne.mamypoko.base.BaseXListViewActivity;
+import cn.wayne.mamypoko.base.BaseXListVIewActivity;
 import cn.wayne.mamypoko.base.entity.EntityList;
 import cn.wayne.mamypoko.mode.home.activity.FindContentActivity;
 import cn.wayne.mamypoko.mode.home.entity.Beauty;
 import cn.wayne.mamypoko.utils.AppUtil;
-import cn.wayne.mamypoko.utils.StringUtil;
 
-public class BbsActivity extends BaseXListViewActivity {
+public class BbsActivity extends BaseXListVIewActivity {
 
     private BbsAdapter mAdapter;
     private List<Beauty.BeautyEntity> mDataSet;

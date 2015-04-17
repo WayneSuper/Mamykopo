@@ -2,7 +2,6 @@ package cn.wayne.mamypoko.mode.noeat;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 
 import com.google.gson.Gson;
@@ -14,10 +13,10 @@ import java.util.Collection;
 import java.util.List;
 
 import cn.wayne.mamypoko.R;
-import cn.wayne.mamypoko.base.BaseXListViewActivity;
+import cn.wayne.mamypoko.base.BaseXListVIewActivity;
 import cn.wayne.mamypoko.base.entity.EntityList;
 
-public class NoeatSearchResultActivity extends BaseXListViewActivity {
+public class NoeatSearchResultActivity extends BaseXListVIewActivity {
     private String keyword;
     private ResultAdapter mAdapter;
     private List<ResultModel.DataEntity> mData;
