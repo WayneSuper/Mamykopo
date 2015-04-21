@@ -89,5 +89,6 @@
     <string name="tiezi">帖子：</string>
     <string name="huifu">回复：</string>
     <string name="to_top">置顶</string>
+    <string name="title_activity_find_beauty">FindBeautyActivity</string>
 
 </resources>

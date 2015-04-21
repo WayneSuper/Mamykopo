@@ -64,9 +64,11 @@
             android:name=".base.BaseWebActivity"
             android:label="@string/title_activity_base_web" >
         </activity>
+        <activity android:name=".mode.circle.CircleListActivity" >
+        </activity>
         <activity
-            android:name=".mode.circle.CircleListActivity"
-           >
+            android:name=".mode.home.activity.FindBeautyActivity"
+            android:label="@string/title_activity_find_beauty" >
         </activity>
     </application>
 

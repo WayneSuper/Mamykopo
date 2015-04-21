@@ -68,6 +68,7 @@ public class MainActivity extends ActionBarActivity implements TabHost.OnTabChan
                     return new View(MainActivity.this);
                 }
             });
+
             mTabhost.addTab(mSpec, mTab.getClzz(), null);
         }
     }

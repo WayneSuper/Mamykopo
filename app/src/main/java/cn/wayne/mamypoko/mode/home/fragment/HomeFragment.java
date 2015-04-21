@@ -26,6 +26,7 @@ import cn.wayne.mamypoko.R;
 import cn.wayne.mamypoko.base.BaseWebActivity;
 import cn.wayne.mamypoko.mode.bbs.BbsActivity;
 import cn.wayne.mamypoko.mode.diary.DiaryListActivity;
+import cn.wayne.mamypoko.mode.home.activity.FindBeautyActivity;
 import cn.wayne.mamypoko.mode.home.activity.FindContentActivity;
 import cn.wayne.mamypoko.mode.home.adapter.FindAdapter;
 import cn.wayne.mamypoko.mode.home.entity.Advert;
@@ -56,6 +57,7 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
     private FloatingActionButton actionButtonDiary;
     private LinearLayout btnBBS;
     private   List<Advert> adverts;
+    private LinearLayout btnFindBty;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -78,6 +80,7 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
         scrollView = (ObservableScrollView) view.findViewById(R.id.scrollView);
         trick = (LinearLayout) view.findViewById(R.id.trickView1);
         btnBBS = (LinearLayout) view.findViewById(R.id.btn_ll_bbs);
+        btnFindBty = (LinearLayout) view.findViewById(R.id.btn_ll_found);
         normal = (LinearLayout) view.findViewById(R.id.trickView2);
         mListView = (NoScrollListView)view.findViewById(R.id.listView);
         actionButtonNoeat = (FloatingActionButton)view.findViewById(R.id.action_btn_noeat);
@@ -102,10 +105,12 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
     private void initEvent() {
         actionButtonDiary.setOnClickListener(this);
         actionButtonNoeat.setOnClickListener(this);
+        btnFindBty.setOnClickListener(this);
         btnBBS.setOnClickListener(this);
         mCarouselView.setOnPageClickListener(new CarouselView.CarouselViewListener() {
             @Override
             public void onClick(int position) {
+                if(adverts==null || adverts.size()==0) return;
                 Advert item = adverts.get(position);
                 String type = item.getType();
                 if("1".equals(type)) {
@@ -215,6 +220,9 @@ public class HomeFragment extends Fragment implements ObservableScrollView.OnScr
                 break;
             case R.id.btn_ll_bbs:
                 startActivity(new Intent(mContext, BbsActivity.class));
+                break;
+            case R.id.btn_ll_found:
+                startActivity(new Intent(mContext, FindBeautyActivity.class));
                 break;
         }
     }

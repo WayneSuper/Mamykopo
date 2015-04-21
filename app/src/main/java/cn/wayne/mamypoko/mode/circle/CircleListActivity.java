@@ -153,8 +153,8 @@ public class CircleListActivity extends BaseScrollViewActivity {
                 Beauty.BeautyEntity item = mData.get(position);
                 Intent intent = new Intent(CircleListActivity.this, FindContentActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString(FindContentActivity.ARGS_ID, item.getUrl());
-                bundle.putString(FindContentActivity.ARGS_TIME, StringUtil.friendlyTime(item.getShowdated()));
+                bundle.putString(FindContentActivity.ARGS_ID, item.getId());
+                bundle.putString(FindContentActivity.ARGS_TIME, item.getShowdated());
                 intent.putExtra("bundle", bundle);
                 CircleListActivity.this.startActivity(intent);
             }
@@ -167,8 +167,8 @@ public class CircleListActivity extends BaseScrollViewActivity {
                 Beauty.BeautyEntity item = mTopData.get(position);
                 Intent intent = new Intent(CircleListActivity.this, FindContentActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString(FindContentActivity.ARGS_ID, item.getUrl());
-                bundle.putString(FindContentActivity.ARGS_TIME, StringUtil.friendlyTime(item.getShowdated()));
+                bundle.putString(FindContentActivity.ARGS_ID, item.getId());
+                bundle.putString(FindContentActivity.ARGS_TIME, item.getShowdated());
                 intent.putExtra("bundle", bundle);
                 CircleListActivity.this.startActivity(intent);
             }
