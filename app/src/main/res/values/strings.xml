@@ -90,5 +90,7 @@
     <string name="huifu">回复：</string>
     <string name="to_top">置顶</string>
     <string name="title_activity_find_beauty">FindBeautyActivity</string>
+    <string name="title_activity_local_music">LocalMusicActivity</string>
+    <string name="local_music">本地歌曲</string>
 
 </resources>

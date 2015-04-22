@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_music_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_music_type1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="单曲"
+            android:textColor="@color/actionBarColor"
+            />
+
+        <TextView
+            android:id="@+id/text_music_type2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="歌手"
+            android:textColor="@color/comm_text_gray"
+            />
+
+        <TextView
+            android:id="@+id/text_music_type3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="专辑"
+            android:textColor="@color/comm_text_gray"
+            />
+
+        <TextView
+            android:id="@+id/text_music_type4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="文件夹"
+            android:textColor="@color/comm_text_gray"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:layout_below="@+id/ll_music_top"
+        android:layout_marginTop="2dp"
+        android:background="@color/comm_line_color"
+        />
+
+    <View
+        android:id="@+id/view_muisc_line"
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:layout_below="@+id/ll_music_top"
+        android:background="@color/actionBarColor"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_muisc_line"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <include layout="@layout/layout_music_ctrl"/>
+    </LinearLayout>
+</RelativeLayout>

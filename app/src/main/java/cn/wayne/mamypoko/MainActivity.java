@@ -1,5 +1,6 @@
 package cn.wayne.mamypoko;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -13,6 +14,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import cn.bmob.v3.Bmob;
+import cn.wayne.mamypoko.service.CoreService;
 import cn.wayne.mamypoko.ui.FragmentTabHost;
 
 
@@ -136,4 +138,9 @@ public class MainActivity extends ActionBarActivity implements TabHost.OnTabChan
         menu.findItem(menuId).setEnabled(true);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this, CoreService.class));
+    }
 }

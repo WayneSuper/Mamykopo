@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="cn.wayne.mamypoko.mode.found.fragment.SingleMusicFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:cacheColorHint="@color/translate"
+            android:divider="@color/comm_line_color"
+            android:dividerHeight="0.67dp"
+            android:listSelector="@drawable/common_btn_bg"
+            android:scrollbars="none"
+            />
+
+        <cn.wayne.mamypoko.ui.view.SlideBar
+            android:id="@+id/slidebar"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:background="@drawable/focused_alphabet_bg"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+
+
+</RelativeLayout>

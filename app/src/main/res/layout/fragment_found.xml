@@ -66,10 +66,22 @@
         app:showLine="hide"
         />
 
+
+    <cn.wayne.mamypoko.ui.FindItem
+        android:id="@+id/fi_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeImage="@drawable/ic_music"
+        app:typeText="音乐播放"
+        android:layout_marginTop="10dp"
+        app:showLine="hide"
+        />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+
         android:layout_gravity="right" />
 
 

@@ -2,6 +2,7 @@ package cn.wayne.mamypoko.utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 /**
  * Created by Lumia on 2015/4/5.
@@ -54,20 +55,21 @@ public class DensityUtil {
      * 获取屏幕宽度
      */
     public static int getScreenW(Context aty) {
-        DisplayMetrics dm = new DisplayMetrics();
-        dm = aty.getResources().getDisplayMetrics();
-        int w = dm.widthPixels;
-        // int w = aty.getWindowManager().getDefaultDisplay().getWidth();
-        return w;
+        DisplayMetrics metric = new DisplayMetrics();
+        WindowManager wm = (WindowManager) aty.getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(metric);
+        int width = metric.widthPixels;     // 屏幕宽度（像素）
+        return width;
     }
 
     /**
      * 获取屏幕高度
      */
     public static int getScreenH(Context aty) {
-        DisplayMetrics dm = new DisplayMetrics();
-        dm = aty.getResources().getDisplayMetrics();
-        int h = dm.heightPixels;
+        DisplayMetrics metric = new DisplayMetrics();
+        WindowManager wm = (WindowManager) aty.getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(metric);
+        int h = metric.heightPixels;
         // int h = aty.getWindowManager().getDefaultDisplay().getHeight();
         return h;
     }
